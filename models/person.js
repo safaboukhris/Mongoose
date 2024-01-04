@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-// @creation person schema
+        // creation person schema
 const personSchema = new mongoose.Schema({
     name:{
         type: String,

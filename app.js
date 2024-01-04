@@ -130,7 +130,7 @@ const deletePerson =  async (_id) => {
         console.error(err);
     }
 }
-    deletePerson('6596787d9be22e325f5282a5')
+    deletePerson('6596787d9be22e325f5282a5');
 
 
 
