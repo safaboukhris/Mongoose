@@ -124,7 +124,7 @@ const updatePerson =  async (name) => {          //finding person by name
 //------@Delete One Document Using model.findByIdAndRemove------
 const deletePerson =  async (_id) => {
     try{
-        const personDeleted = await  Person.findOneAndDelete( {_id} )
+        const personDeleted = await  Person.findByIdAndDelete( {_id} )
         console.log("person deleted:", personDeleted);
     } catch (err) {
         console.error(err);
@@ -150,7 +150,7 @@ const deleteManyPeople = async (name) =>{
 
 //------@Chain Search Query Helpers to Narrow Search Results-----
 const queryChain = () =>{
-    Person.find({favoriteFoods:"burritos"})       //Find person who like burritos
+    Person.find({favoriteFoods:"burritos"})       //Find people who like burritos
         .sort({name:1})       // sort ascending by firstName
         .limit(2)            // limit to 2 items
         .select("-age")     // Hide the age
